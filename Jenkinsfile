@@ -19,7 +19,7 @@ pipeline {
                 branch 'development' 
             }
             steps {
-                sh 'echo deliver for development"
+                sh 'echo deliver for development'
             }
         }
         stage('Deploy for production') {
@@ -27,7 +27,7 @@ pipeline {
                 branch 'production'  
             }
             steps {
-                sh 'echo deliver for development"
+                sh 'echo deliver for development'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'echo finished'
             }
