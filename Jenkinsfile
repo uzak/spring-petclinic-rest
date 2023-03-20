@@ -3,34 +3,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-<<<<<<< Updated upstream
-                sh 'echo "Hello world!"'
-||||||| Stash base
-                sh 'java --version'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'echo Test Stage'
-            }
-        }
-        stage('Deliver for development') {
-            when {
-                branch 'development' 
-            }
-            steps {
-                sh 'echo deliver for development'
-            }
-        }
-        stage('Deploy for production') {
-            when {
-                branch 'production'  
-            }
-            steps {
-                sh 'echo deliver for development'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh 'echo finished'
-=======
                 sh 'java --version'
             }
         }
@@ -64,7 +36,6 @@ pipeline {
                 sh 'echo deliver for production'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'echo finished'
->>>>>>> Stashed changes
             }
         }
     }
